@@ -46,7 +46,7 @@ touch /.autorelabel
   ```
 ### 3. Добавить модуль в initrd
 ---
-***- Создадим папку, поместим в нее два скрипта [module-setup.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/module_setup.sh), [test.sh]()
+***- Создадим папку, поместим в нее два скрипта [module-setup.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/module_setup.sh), [test.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/test.sh)
 ```console
 
 ```
