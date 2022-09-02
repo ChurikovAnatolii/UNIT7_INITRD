@@ -29,8 +29,9 @@ ___
    *** Creating image file done ***
    *** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
    reboot
-   [root@localhost vagrant]# vgs
-  VG     #PV #LV #SN Attr   VSize   VFree
-  centos   1   2   0 wz--n- <38.97g    0 
+   
+   vgs
+   VG     #PV #LV #SN Attr   VSize   VFree
+   centos   1   2   0 wz--n- <38.97g    0 
    
   ```
