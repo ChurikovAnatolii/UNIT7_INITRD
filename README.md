@@ -44,3 +44,9 @@ touch /.autorelabel
    centos   1   2   0 wz--n- <38.97g    0 
    
   ```
+### 3. Добавить модуль в initrd
+---
+***- Создадим папку, поместим в нее два скрипта [module-setup.sh](), [test.sh]()
+```console
+
+```
