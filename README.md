@@ -47,6 +47,28 @@ touch /.autorelabel
 ### 3. Добавить модуль в initrd
 ---
 ***- Создадим папку, поместим в нее два скрипта [module-setup.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/module_setup.sh), [test.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/test.sh)
+
 ```console
+[root@localhost vagrant]# mkdir /usr/lib/dracut/modules.d/01test
+[root@localhost vagrant]# cd /usr/lib/dracut/modules.d/01test/
+[root@localhost 01test]# nano module-setup.sh
+[root@localhost 01test]# nano test.sh
 
 ```
+***- Пересоберем initrd, посмотрим какие модули загружены
+
+```console
+[root@localhost 01test]# dracut -f -v
+
+*** Creating image file ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
+
+[root@localhost 01test]# lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
+test
+```
+
+***- Уберем из [grub.cfg](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub.cfg) опции rghb и quiet, чтобы увидеть вывод нашего модуля при загрузке
+
+
+
