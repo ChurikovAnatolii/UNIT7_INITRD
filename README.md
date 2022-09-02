@@ -19,4 +19,4 @@ ___
   Volume group "VolGroup00" successfully renamed to "centos"
   ```
   
-  > Изменим название VG в  [/etc/fstab](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/fstab), [/etc/default/grub](), [/boot/grub2/grub.cfg]() 
+  > Изменим название VG в  [/etc/fstab](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/fstab), [/etc/default/grub](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub), [/boot/grub2/grub.cfg]() 
