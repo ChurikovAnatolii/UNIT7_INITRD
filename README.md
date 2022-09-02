@@ -19,4 +19,18 @@ ___
   Volume group "VolGroup00" successfully renamed to "centos"
   ```
   
-  > Изменим название VG в  [/etc/fstab](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/fstab), [/etc/default/grub](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub), [/boot/grub2/grub.cfg]() 
+  > Изменим название VG в  [/etc/fstab](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/fstab), [/etc/default/grub](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub), [/boot/grub2/grub.cfg](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub.cfg)  
+  
+  > Создадим initrd, ребутнемся и проверим имя VG  
+  ```console
+  mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+  
+   *** Creating image file ***
+   *** Creating image file done ***
+   *** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
+   reboot
+   [root@localhost vagrant]# vgs
+  VG     #PV #LV #SN Attr   VSize   VFree
+  centos   1   2   0 wz--n- <38.97g    0 
+   
+  ```
