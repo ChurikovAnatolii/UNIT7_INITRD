@@ -46,7 +46,7 @@ touch /.autorelabel
   ```
 ### 3. Добавить модуль в initrd
 ---
-***- Создадим папку, поместим в нее два скрипта [module-setup.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/module_setup.sh), [test.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/test.sh)
+***- Создадим папку, поместим в нее два скрипта [module-setup.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/module_setup.sh), [test.sh](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/test.sh)***
 
 ```console
 [root@localhost vagrant]# mkdir /usr/lib/dracut/modules.d/01test
@@ -55,7 +55,7 @@ touch /.autorelabel
 [root@localhost 01test]# nano test.sh
 
 ```
-***- Пересоберем initrd, посмотрим какие модули загружены
+***- Пересоберем initrd, посмотрим какие модули загружены***
 
 ```console
 [root@localhost 01test]# dracut -f -v
@@ -68,7 +68,7 @@ touch /.autorelabel
 test
 ```
 
-***- Уберем из [grub.cfg](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub.cfg) опции rghb и quiet, чтобы увидеть вывод нашего модуля при загрузке
+***- Уберем из [grub.cfg](https://github.com/ChurikovAnatolii/UNIT7_INITRD/blob/main/grub.cfg) опции rghb и quiet, чтобы увидеть вывод нашего модуля при загрузке***
 
 
 
